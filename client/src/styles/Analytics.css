@@ -1,0 +1,476 @@
+.analytics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.analytics-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.time-range-selector {
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.time-btn {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.time-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.time-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(76, 205, 196, 0.4);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.metric-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.metric-icon {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-label {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-value {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.analytics-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.analytics-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+}
+
+/* Mood Distribution */
+.mood-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.mood-bar-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 60px;
+    gap: 1rem;
+    align-items: center;
+}
+
+.mood-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mood-bar-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    height: 32px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mood-bar {
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: 8px;
+}
+
+.mood-count {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    text-align: right;
+}
+
+/* Activity Breakdown */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.activity-item {
+    display: grid;
+    grid-template-columns: 120px 1fr 50px;
+    gap: 1rem;
+    align-items: center;
+}
+
+.activity-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+}
+
+.activity-progress {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    height: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.activity-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width 0.5s ease;
+    border-radius: 8px;
+}
+
+.activity-count {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-align: right;
+}
+
+/* Mood Trend */
+.mood-trend {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 0.75rem;
+    height: 200px;
+    padding: 1rem 0;
+}
+
+.trend-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.trend-bar {
+    width: 100%;
+    min-width: 30px;
+    max-width: 50px;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.trend-bar:hover {
+    opacity: 1;
+    transform: scaleY(1.05);
+}
+
+.trend-date {
+    margin: 0;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin-top: 0.5rem;
+}
+
+/* Insights */
+.insights-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.insight-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.insight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.insight-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.error-message {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: #ff6b6b;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .analytics-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .analytics-header h1 {
+        font-size: 2rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .mood-bar-container {
+        grid-template-columns: 80px 1fr 50px;
+    }
+
+    .activity-item {
+        grid-template-columns: 100px 1fr 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .analytics-container {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .analytics-header {
+        gap: 1rem;
+    }
+
+    .analytics-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .time-range-selector {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .time-btn {
+        flex: 1;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .metric-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .analytics-section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .analytics-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .mood-bar-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .mood-label {
+        margin-bottom: 0.25rem;
+    }
+
+    .mood-count {
+        position: absolute;
+        right: 1rem;
+    }
+
+    .activity-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .activity-count {
+        text-align: left;
+    }
+
+    .mood-trend {
+        gap: 0.5rem;
+        height: 150px;
+    }
+
+    .trend-bar {
+        min-width: 20px;
+        max-width: 40px;
+    }
+
+    .trend-date {
+        font-size: 0.65rem;
+    }
+
+    .insights-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .analytics-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .analytics-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .time-range-selector {
+        flex-direction: column;
+    }
+
+    .time-btn {
+        width: 100%;
+    }
+
+    .metric-card {
+        padding: 1rem;
+    }
+
+    .metric-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .metric-value {
+        font-size: 1.5rem;
+    }
+
+    .analytics-section {
+        padding: 1rem;
+    }
+
+    .mood-distribution {
+        gap: 0.75rem;
+    }
+
+    .mood-bar-wrapper {
+        height: 24px;
+    }
+
+    .mood-trend {
+        height: 120px;
+        gap: 0.25rem;
+    }
+
+    .trend-bar {
+        min-width: 15px;
+        max-width: 30px;
+    }
+}
