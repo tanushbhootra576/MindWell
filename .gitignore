@@ -21,8 +21,6 @@ client/build/
 server/dist/
 
 # Env files
-.env
-.env.local
 .env.*.local
 server/.env
 client/.env
@@ -48,3 +46,6 @@ serviceAccountKey.json
 # Optional: lockfiles are usually committed; uncomment to ignore
 # package-lock.json
 # yarn.lock
+config.bat
+temp_auto_push.bat
+temp_interactive_push.bat
