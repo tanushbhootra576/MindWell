@@ -262,5 +262,3 @@ For issues, feature requests, or general support:
 ---
 
 Built with care for mental wellness and personal growth.
-#   M i n d W e l l  
- 
